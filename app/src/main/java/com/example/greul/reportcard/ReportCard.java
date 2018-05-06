@@ -2,21 +2,31 @@ package com.example.greul.reportcard;
 
 public class ReportCard {
 
+    //Declare Variables
+    private String mStudentName = "";
+    private char mEnglishGrade = ' ';
+    private char mHistoryGrade = ' ';
+    private char mMathGrade = ' ';
+    private char mScienceGrade = ' ';
+
     //Constructor of ReportCard without any parameters
     public ReportCard(){
-        String mStudentName = "";
-        char mEnglishGrade = ' ';
-        char mHistoryGrade = ' ';
-        char mMathGrade = ' ';
-        char mScienceGrade = ' ';
+        //Initialize variables
+        mStudentName = "";
+        mEnglishGrade = ' ';
+        mHistoryGrade = ' ';
+        mMathGrade = ' ';
+        mScienceGrade = ' ';
     }
 
     //Constructor given a student name parameter
     public ReportCard(String studentName){
-        String mStudentName = studentName;
-        char mEnglishGrade = ' ';
-        char mHistoryGrade = ' ';
-        char mMathGrade = ' ';
-        char mScienceGrade = ' ';
+        mStudentName = studentName;
+        mEnglishGrade = ' ';
+        mHistoryGrade = ' ';
+        mMathGrade = ' ';
+        mScienceGrade = ' ';
     }
+
+
 }
