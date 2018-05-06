@@ -8,6 +8,7 @@ public class ReportCard {
     private char mHistoryGrade = ' ';
     private char mMathGrade = ' ';
     private char mScienceGrade = ' ';
+    char[] validGrades = {'A', 'B', 'C', 'D', 'F'};
 
     //Constructor of ReportCard without any parameters
     public ReportCard(){
@@ -26,6 +27,31 @@ public class ReportCard {
         mHistoryGrade = ' ';
         mMathGrade = ' ';
         mScienceGrade = ' ';
+    }
+
+    //Returns Student Name
+    public String getStudentName(){
+        return mStudentName;
+    }
+
+    //Returns English Grade for given student
+    public char getEnglishGrade(){
+        return mEnglishGrade;
+    }
+
+    //Returns History Grade for given student
+    public char getHistoryGrade(){
+        return mHistoryGrade;
+    }
+
+    //Returns Math Grade for given student
+    public char getMathGrade(){
+        return mMathGrade;
+    }
+
+    //Returns Science Grade for Given Student
+    public char getScienceGrade(){
+        return mScienceGrade;
     }
 
 
