@@ -8,7 +8,9 @@ public class ReportCard {
     private char mHistoryGrade = ' ';
     private char mMathGrade = ' ';
     private char mScienceGrade = ' ';
-    char[] validGrades = {'A', 'B', 'C', 'D', 'F'};
+    private char[] validGrades = {'A', 'B', 'C', 'D', 'F'};
+    private boolean isValidGrade = false;
+    private String reportCard;
 
     //Constructor of ReportCard without any parameters
     public ReportCard(){
@@ -55,32 +57,59 @@ public class ReportCard {
     }
 
     //Sets the Student Name
-    public String setStudentName(){
-        return mStudentName;
+    public void setStudentName(String name){
+        mStudentName = name;
+        reportCard += "Student Name: " + mStudentName + "\n";
     }
 
     //Sets the English Grade for given student.  Verifies against the list of valid grade
-    public char setEnglishGrade(){
-        return mEnglishGrade;
+    public void setEnglishGrade(char grade){
+        isValidGrade = checkValidGrade(grade);
+        if (isValidGrade == true){
+            reportCard += "English: " + grade + "\n";
+        }
+        isValidGrade = false;
     }
 
     //Sets the History Grade for given student.  Verifies against the list of valid grade
-    public char setHistoryGrade(){
-        return mHistoryGrade;
+    public void setHistoryGrade(char grade){
+        isValidGrade = checkValidGrade(grade);
+        if (isValidGrade == true){
+            reportCard += "History: " + grade + "\n";
+        }
+        isValidGrade = false;
     }
 
     //Sets the Math Grade for given student.  Verifies against the list of valid grade
-    public char setMathGrade(){
-        return mMathGrade;
+    public void setMathGrade(char grade){
+        isValidGrade = checkValidGrade(grade);
+        if (isValidGrade == true){
+            reportCard += "Math: " + grade + "\n";
+        }
+        isValidGrade = false;
     }
 
     //Sets the Science Grade for Given Student.  Verifies against the list of valid grade
-    public char setScienceGrade(){
-        return mScienceGrade;
+    public void setScienceGrade(char grade){
+        isValidGrade = checkValidGrade(grade);
+        if (isValidGrade == true){
+            reportCard += "Science: " + grade + "\n";
+        }
+        isValidGrade = false;
+    }
+
+    //The purpose of this method is to check the parameter against valid grade.
+    public boolean checkValidGrade(char grade){
+        for (int x = 0; x < validGrades.length; x++){
+            if(grade == x){
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override
     public String toString() {
-        return super.toString();
+        return reportCard;
     }
 }
