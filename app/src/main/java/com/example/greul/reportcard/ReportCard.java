@@ -54,5 +54,33 @@ public class ReportCard {
         return mScienceGrade;
     }
 
+    //Sets the Student Name
+    public String setStudentName(){
+        return mStudentName;
+    }
 
+    //Sets the English Grade for given student.  Verifies against the list of valid grade
+    public char setEnglishGrade(){
+        return mEnglishGrade;
+    }
+
+    //Sets the History Grade for given student.  Verifies against the list of valid grade
+    public char setHistoryGrade(){
+        return mHistoryGrade;
+    }
+
+    //Sets the Math Grade for given student.  Verifies against the list of valid grade
+    public char setMathGrade(){
+        return mMathGrade;
+    }
+
+    //Sets the Science Grade for Given Student.  Verifies against the list of valid grade
+    public char setScienceGrade(){
+        return mScienceGrade;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }
